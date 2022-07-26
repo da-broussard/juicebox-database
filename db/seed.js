@@ -216,7 +216,7 @@ async function testDB() {
 
     
     const getAllTagsResult= await getAllTags();
-    console.log(getAllTagsResult);
+    // console.log(getAllTagsResult);
 
     console.log("Finished database tests!");
   } catch (error) {
