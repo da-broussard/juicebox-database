@@ -66,13 +66,10 @@ postsRouter.patch('/:postId', requireUser, async (req, res, next) => {
       const updatedPost = await updatePost(postId, updateFields);
       res.send({ post: updatedPost })
     } else {
-      next({
-        name: 'UnauthorizedUserError',
-        message: 'You cannot update a post that is not yours'
-      })
+      
     }
-  } catch ({ name, message }) {
-    // next({ name, message });
+  } catch (error) {
+   console.error(error)
   }
 });
 
